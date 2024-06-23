@@ -1,18 +1,15 @@
-<div class="bg-gray-900 w-3/5 h-4/5 rounded-xl p-3 min-w-[500px] max-w-[750px]">
-    <% form_with url:'generate_room' do |f| %>
-        <div class="flex flex-col gap-3">
-            <div class="flex flex-col gap-2">
-                <%= f.label :room_name, class: "text-white" %>
-                <%= f.text_field :room_name, class: "bg-black text-white rounded-xl p-2" %>
-            </div>
-            <div class="flex flex-col gap-2">
-                <%= f.label :room_password, class: "text-white" %>
-                <%= f.password_field :room_password, class: "bg-black text-white rounded-xl p-2" %>
-            </div>
-            <div class="flex flex-col gap-2">
-                <%= f.label :room_password_confirmation, class: "text-white" %>
-                <%= f.password_field :room_password_confirmation, class: "bg-black text-white rounded-xl p-2" %>
-            </div>
-            <div class="flex justify-center">
-                <%= f.submit 'Create', class: "bg-green-
+<script>
+    const input = document.getElementById('word_input');
+    input.addEventListener('input', (e) => {
+        input.value = input.value.replace(/[0-9]/, '').toUpperCase().slice(0, 10);
+    });
+</script>
+
+<div class="bg-gray-900 w-3/5 h-4/5 rounded-xl p-3 min-w-[500px] max-w-[750px] flex justify-center flex-col">
+    <%= form_with url:generate_room_path, method: :post, local: true  do |f| %>
+        <div class="flex flex-col items-center">
+            <%= f.text_field :word, class: 'w-3/5 h-10 rounded-xl bg-gray-800 text-white text-center', placeholder: 'Enter Word', pattern: '[A-Za-z]{1,10}', required: true, id:"word_input"  %>
+            <%= f.submit 'Create Room', class: 'w-3/5 h-10 rounded-xl bg-gray-800 text-white mt-3'  %>
+        </div>
+    <% end %>
 </div>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  roomID: MyString
+  word: MyString
+  result: MyString
+
+two:
+  roomID: MyString
+  word: MyString
+  result: MyString

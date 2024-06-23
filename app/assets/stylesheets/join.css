@@ -1,0 +1,43 @@
+.guess-letter {
+    background-color: #1f2937;
+    color: white;
+    font-weight: bold;
+
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: white 1px solid;
+    border-radius: 10px;
+}
+
+.present {
+    background-color: #c3ff00;
+}
+
+.absent {
+
+}
+
+.correct {
+    background-color: #146f14;
+}
+
+.keyboard-buttons {
+    padding: 0 10px 0 10px;
+    height: 50px;
+    min-width: 40px;
+    background-color: rgb(90, 90, 90);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard-button-disabled {
+    background-color: #353535;
+}

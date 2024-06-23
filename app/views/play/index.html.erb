@@ -6,10 +6,14 @@
     <%= link_to 'Create new game', create_path, class: "bg-yellow-700 p-3 text-l text-white rounded-xl" %>
   </div>
   <div class="h-[1px] w-full bg-sky-400"></div>
-  <%= form_with url: join_path, method: :post, local: true do %>
+  <%= form_with url: join_path, method: :get, local: true do %>
     <div class="flex justify-center gap-2">
       <%= text_field_tag :roomID, nil, class: "bg-black text-white w-3/5", placeholder: "Enter the join code" %>
       <%= submit_tag 'Join', class: "bg-green-800 rounded-full px-4 text-white" %>
     </div>
   <% end %>
+    <div style="color: red;">
+      <%= flash[:error] %>
+    </div>
+  
 </div>
